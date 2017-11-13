@@ -9,7 +9,7 @@ SIZE=$(formatSize "$RESULT")
 SUBSTRING="479 x 841"
 #echo $SIZE
 if [[ "$SIZE" == *"$SUBSTRING"* ]]; then
-	exec gs -o outputA3.pdf -sDEVICE=pdfwrite -sPAPERSIZE=a3 -dFIXEDMEDIA -dPDFFitPage -dCompatibilityLevel=1.4 -c "<</BeginPage{1.0 0.88 scale 0 65 translate}>> setpagedevice" -f $1
+	exec gs -o outputA3.pdf -sDEVICE=pdfwrite -r60x72 -sPAPERSIZE=a3 -dFIXEDMEDIA -dPDFFitPage -dCompatibilityLevel=1.4 -c "<</BeginPage{1.0 0.88 scale 0 65 translate}>> setpagedevice" -f $1
 	echo "true"
 else
 	echo "false"
