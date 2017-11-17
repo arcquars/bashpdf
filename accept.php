@@ -29,7 +29,7 @@ if($_FILES['file']['name'])
 			if(strcmp($output, 'false') == 0){
 				$message = 'La tarea se realizo con exito!!';
 			}else{
-				$auxDir = dirname(__FILE__).'/outputA3.pdf';
+				$auxDir = dirname(__FILE__).'/output.pdf';
 				header('Content-Type: application/octet-stream');
 				header("Content-Transfer-Encoding: Binary"); 
 				header("Content-disposition: attachment; filename=\"" . basename($auxDir) . "\"");
